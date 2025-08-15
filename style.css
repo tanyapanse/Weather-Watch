@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("Pixellari\ copy.ttf") format("truetype");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:  #a99fea;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+    margin-top: 5px;
+    display: flex;
+    gap: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: "MyFont", sans-serif;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.523);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#weather-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body.sunrise {
+  background-color: #a99fea;
+
+}
+
+body.sunset {
+  background-color: #8073d9;
+  color:#8073d9;
+}
+
+button#toggle-theme {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cccccc83;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
